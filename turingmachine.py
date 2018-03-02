@@ -143,20 +143,6 @@ class TuringMachine:
 
 
 """
-transition_function = {
-    'q0': {
-        'a': ('q0', 'a', 'R'),
-        'b': ('q1', 'a', 'R'),
-        '*': ('qrej', '*', 'L')
-    },
-    'q1': {
-        'a': ('q1', 'b', 'R'),
-        'b': ('qacc', 'b', 'L'),
-        '*': ('qrej', '*', 'L')
-    }
-}
-"""
-
 # infinite problem
 transition_function = {
     'q0': {
@@ -172,6 +158,22 @@ transition_function = {
         '*': ('qr', '*', 'R')
     }
 }
+"""
 
-t = TuringMachine('aaa*', transition_function)
+transition_function = {
+    'q0': {
+        'a': ('q0', 'a', 'R'),
+        'b': ('q1', 'a', 'R'),
+        '*': ('qrej', '*', 'L')
+    },
+    'q1': {
+        'a': ('q1', 'b', 'R'),
+        'b': ('qacc', 'b', 'L'),
+        '*': ('qrej', '*', 'L')
+    }
+}
+
+tape = 'aba*'
+
+t = TuringMachine(tape, transition_function)
 t.stepAll()
