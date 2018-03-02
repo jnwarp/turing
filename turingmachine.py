@@ -1,5 +1,9 @@
-# Python3 Turing Machine
-# github.com/jnwarp/turing
+"""
+Python3 Turing Machine
+Copyright (c) 2018 James Warp
+
+github.com/jnwarp/turing
+"""
 
 class TuringMachine:
     """
